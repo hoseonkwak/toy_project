@@ -752,16 +752,31 @@
 	{
 		"date": "2022-05-09",
 		"income": "out",
-		"classify": "",
+		"classify": "eatout",
 		"history": "점심",
 		"price": 8000
 	},
 	{
 		"date": "2022-05-10",
 		"income": "out",
-		"classify": "",
+		"classify": "eatout",
 		"history": "마라탕",
 		"price": 11000
+	},
+	{
+		"date": "2022-05-11",
+		"income": "out",
+		"classify": "eatout",
+		"history": "김밥천국",
+		"price": 12000
+	},
+	
+	{
+		"date": "2022-05-11",
+		"income": "out",
+		"classify": "eatout",
+		"history": "칼국수",
+		"price": 9000
 	}
 ]
 }
