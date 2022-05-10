@@ -16,7 +16,7 @@ header.main_header .search_area li img{height: 100%;}
 .account_main .account_info_wrap{width: 279px; height: 155px; background-color: #fff; box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19); border-radius: 12px; margin: 0 auto 18px;}
 .account_info_wrap .account_number_area{position: relative; text-align: center; padding: 12px;}
 .account_info_wrap .account_number_area .account{color: #858585; font-size: 14px;}
-.account_info_wrap .account_number_area .transfer{background-color: transparent; position: absolute; top: 50%; right: 5vw; transform: translateY(-50%); font-size: 14px;}
+.account_info_wrap .account_number_area .transfer{background-color: transparent; position: absolute; top: 50%; right: 20px; transform: translateY(-50%); font-size: 14px;}
 .account_info_wrap .account_balance_area{padding: 10px; font-size: 14px; text-align: center; font-weight: 500;}
 .account_info_wrap .account_balance_area span{font-size: 24px; letter-spacing: 0.09em; line-height: 1;}
 .account_info_wrap .account_goal_area{text-align: center;}
@@ -79,13 +79,16 @@ nav.menu .menu_area li.on a img{filter: invert(0.8); opacity: .7;}
 
 /* 지출관리 */
 .cont{position: relative; padding: 30px 30px 10px;}
-.cont > h3{font-size: 18px; margin-bottom: 14px;}
+.cont > h3{font-size: 18px; margin-bottom: 20px;}
 .manage_wrap{position: fixed; top: 0; left: 0; width: 100%; min-height: 692px; height: calc(100% - 76px); background-color: #fff; z-index: 2; transition: all .5s cubic-bezier(0, 0.21, 0.03, 1.01); opacity: 0; top: 100%;}
 .manage_wrap header.manage_header{height: 40px;}
 .manage_wrap header.manage_header .manage_title{font-size: 24px; font-weight: 500;}
 .manage_wrap header.manage_header .close_btn{position: absolute; right: 13px; top: 15px; background: transparent; font-weight: 300; font-size: 14px;}
-.manage_wrap .manage_scroll_area{height: calc(100% - 80px);}
+.manage_wrap .manage_scroll_area{height: calc(100% - 80px); overflow-y: scroll;}
 .manage_wrap .manage_scroll_area .goal_area{}
 .manage_wrap .manage_scroll_area .goal_area .title_area{display: flex; justify-content: space-between; align-items: center;}
 .manage_wrap .manage_scroll_area .goal_area .title_area h3{font-weight: 500; font-size: 18px;}
 .manage_wrap .manage_scroll_area .goal_area .title_area span{font-size: 24px; font-weight: 500; color: #ff5f00;}
+.spend_wrap{position: relative;}
+.spend_wrap .totalOut_area{position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%); font-size: 14px;}
+.spend_wrap .totalOut_area .totalOut{font-size: 24px;}

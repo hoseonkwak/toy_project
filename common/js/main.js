@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', function() {
   //json 데이터
-  // const jsonUrl = 'https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank.json';
-  const jsonUrl = '../bank.json';
+  const jsonUrl = 'https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank.json';
+  //const jsonUrl = '../bank.json';
   const dataResult = fetch(jsonUrl)
     .then((res) => {
       return res.json();
@@ -13,6 +13,7 @@ window.addEventListener('DOMContentLoaded', function() {
       progressbar(obj, date); // 계좌 그래프, 남은 금액
       accountHistory(obj, date);  // 계좌내역
       dateChart(obj, date); // 일간 그래프
+      outPattern(obj, date);  //지출패턴
       console.log(obj.bankList);
     });
 
@@ -128,7 +129,7 @@ window.addEventListener('DOMContentLoaded', function() {
     for(let i = 0; i < thisMonthOutArr.length; i++){
       thisMonthOut += thisMonthOutArr[i].price;
     }
-    // console.log(thisMonthOut);
+    console.log(thisMonthOut);
 
     // 현재 사용 %
     const nowPer = thisMonthOut / limitMoney * 100;
@@ -277,10 +278,10 @@ window.addEventListener('DOMContentLoaded', function() {
     }
   
 
-    console.log(dateI);
+    //console.log(dateI);
     // 겹치는 날짜 제거
     const set = new Set(dateI);
-    console.log(set);
+    //console.log(set);
     
     let dailyhis = [];
     let dailyPay = [];
@@ -293,12 +294,12 @@ window.addEventListener('DOMContentLoaded', function() {
       for(let i = 0; i < dailyArray.length; i++){
         if(dailyArray[i].income === 'out' ? dailyOut += dailyArray[i].price : dailyOut -= dailyArray[i].price);
       }
-      console.log(dailyOut);
+      //console.log(dailyOut);
       dailyhis.push([...set][i].substr(8, 2));
       dailyPay.push(dailyOut);
     }
-    console.log(dailyhis);
-    console.log(dailyPay);
+    //console.log(dailyhis);
+    //console.log(dailyPay);
 
     const data = {
       labels:dailyhis,
@@ -315,6 +316,73 @@ window.addEventListener('DOMContentLoaded', function() {
       type: 'bar',
       data: data,
       options: {
+        responsive: true,
+        legend: {
+          display: false,
+        },
+      },
+    });
+
+  }
+
+  // 지출 패턴
+  function outPattern(obj, date){
+    const canvas = document.querySelector('#monthChart1');
+
+    const thisMonth = date.getMonth() +1;
+    const monthSpan = document.querySelector('.manage_wrap .manage_scroll_area .spend_wrap h3 span');
+    console.log(thisMonth);
+    monthSpan.textContent = thisMonth;
+
+    let classifyArr = [];
+
+    // console.log(obj.bankList[0].date.substr(8, 2)% 2);
+    for(let i = 0; i < obj.bankList.length; i++){
+      if(obj.bankList[i].classify !== '') classifyArr.push(obj.bankList[i].classify);
+    }
+    console.log(classifyArr);
+
+    // 겹치는 분류 제거
+    const set = new Set(classifyArr);
+    console.log(set);
+
+    
+    let patternArr = [];  //패턴 값
+    for(let i = 0; i < [...set].length; i++){
+      // 패턴별 정리
+      let patternValue = 0;
+      const pattern = obj.bankList.filter((e) => {
+        return e.classify === [...set][i];
+      });
+      console.log(pattern);
+      for(let i = 0; i < pattern.length; i++){
+        patternValue += pattern[i].price;
+      }
+      console.log(patternValue);
+      patternArr.push(patternValue);
+    }
+    console.log(patternArr);
+
+    const data = {
+      labels:patternArr,
+      datasets: [{
+        label: "label1",
+        data: patternArr,
+        backgroundColor: [
+          '#bd5b00',
+          '#0057bd',
+          '#00bdb2',
+          '#fec229',
+          '#c4c4c4'
+        ],
+      }]
+    }
+
+    const patternchart = new Chart(canvas, {
+      type: 'doughnut',
+      data: data,
+      options: {
+        responsive: true,
         legend: {
           display: false,
         },
