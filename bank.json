@@ -748,6 +748,20 @@
 		"classify": "",
 		"history": "월급",
 		"price": 5000000
+	},
+	{
+		"date": "2022-05-09",
+		"income": "out",
+		"classify": "",
+		"history": "점심",
+		"price": 8000
+	},
+	{
+		"date": "2022-05-10",
+		"income": "out",
+		"classify": "",
+		"history": "마라탕",
+		"price": 11000
 	}
 ]
 }

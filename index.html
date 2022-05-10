@@ -34,18 +34,20 @@
           <button class="transfer">이체</button>
         </div>
         <div class="account_balance_area">
-          <span>1,240,000</span>원
+          <span></span>원
         </div>
         <ul class="account_goal_area">
           <li class="progress_area">
             <div class="progressbar">
-              <div class="now_bar"></div>
-              <span class="goal_bar"></span>
+              <div class="goal_bar">
+                <div class="now_bar"></div>
+              </div>
+              <span class="goal_stick"></span>
             </div>
             <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
           </li>
           <li class="rest_goal_area">
-            <span class="term">5</span>일 동안 <span class="pay">210,000</span>원 사용가능
+            <span class="term"></span>일 동안 <span class="pay">210,000</span>원 사용가능
           </li>
         </ul>
       </div>
@@ -84,66 +86,6 @@
         </div>
         <div class="account_history_area">
           <ul class="day_history">
-            <li>
-              <div class="title_area">
-                <strong>오늘</strong>
-                <p>
-                  <span>127,600</span>원 지출
-                </p>
-              </div>
-              <ul class="history_cont">
-                <li>
-                  <span class="his_name">미스터피자</span>
-                  <span class="his_money out">32,000</span>
-                </li>
-                <li>
-                  <span class="his_name">택시</span>
-                  <span class="his_money out">4,800</span>
-                </li>
-                <li>
-                  <span class="his_name">이마트</span>
-                  <span class="his_money out">86,000</span>
-                </li>
-                <li>
-                  <span class="his_name">스타벅스</span>
-                  <span class="his_money out">4,800</span>
-                </li>
-                <li>
-                  <span class="his_name">홍길동</span>
-                  <span class="his_money in">20,000</span>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <div class="title_area">
-                <strong>오늘</strong>
-                <p>
-                  <span>127,600</span>원 지출
-                </p>
-              </div>
-              <ul class="history_cont">
-                <li>
-                  <span class="his_name">미스터피자</span>
-                  <span class="his_money out">32,000</span>
-                </li>
-                <li>
-                  <span class="his_name">택시</span>
-                  <span class="his_money out">4,800</span>
-                </li>
-                <li>
-                  <span class="his_name">이마트</span>
-                  <span class="his_money out">86,000</span>
-                </li>
-                <li>
-                  <span class="his_name">스타벅스</span>
-                  <span class="his_money out">4,800</span>
-                </li>
-                <li>
-                  <span class="his_name">홍길동</span>
-                  <span class="his_money in">20,000</span>
-                </li>
-              </ul>
-            </li> 
           </ul>
         </div>
       </div>
@@ -160,20 +102,22 @@
             <h3>기준금액설정</h3> <span>2100000원</span>
           </li>
           <li class="progress_area">
-            <div class="progressbar">
-              <span class="goal_bar"></span>
-              <div class="now_bar"></div>
+            <div class="progressbar manage">
+              <div class="goal_bar">
+                <div class="now_bar"></div>
+              </div>
+              <span class="goal_stick"></span>
             </div>
-            <span><img src="./common/img/chart_icon.svg" alt="chart"></span>
+            <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
           </li>
         </ul>
         <div class="daily_report_wrap cont">
           <h3>일간 리포트</h3>
-
+          <canvas id="dateChart1"></canvas>
         </div>
         <div class="spend_wrap cont">
-          <h3>6월 지출 패턴</h3>
-
+          <h3><span>6</span>월 지출 패턴</h3>
+          <canvas id="monthChart1"></canvas>
         </div>
       </div>
     </div>

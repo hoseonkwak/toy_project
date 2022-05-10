@@ -21,10 +21,13 @@ header.main_header .search_area li img{height: 100%;}
 .account_info_wrap .account_balance_area span{font-size: 24px; letter-spacing: 0.09em; line-height: 1;}
 .account_info_wrap .account_goal_area{text-align: center;}
 .account_info_wrap .account_goal_area li{margin-bottom: 4px;}
-.account_goal_area .progress_area{display: flex; justify-content: center; align-items: center;}
-.account_goal_area .progressbar{position: relative; width: 202px; height: 6px; background-color: #c4c4c4; border-radius: 3px; margin-right: 7px;}
-.account_goal_area .progressbar .goal_bar{position: absolute; top: -7px; background: url(../img/goal_bar.svg) no-repeat center; width: 8px; height: 21px;}
-.account_goal_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #ffdb4c; border-radius: 3px 0 0 3px;}
+.progress_area{display: flex; justify-content: center; align-items: center;}
+.progress_area .progressbar{position: relative; width: 202px; height: 6px; background-color: #c4c4c4; border-radius: 3px; margin-right: 7px;}
+.progress_area .progressbar .goal_bar{position: relative; width: 40%; height: 100%; border-radius: 3px 0 0 3px;}
+
+.progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #ffdb4c; border-radius: 3px 0 0 3px;}
+.progress_area .progressbar .goal_stick{position: absolute; top: -7px; background: url(../img/goal_bar.svg) no-repeat center; width: 8px; height: 21px;}
+
 .account_goal_area .rest_goal_area{font-size: 14px; color: #858585;}
 .account_goal_area .term,
 .account_goal_area .pay{font-size: inherit;}
@@ -76,8 +79,8 @@ nav.menu .menu_area li.on a img{filter: invert(0.8); opacity: .7;}
 
 /* 지출관리 */
 .cont{position: relative; padding: 30px 30px 10px;}
-.cont > h3{font-size: 18px;}
-.manage_wrap{position: fixed; top: 0; left: 0; width: 100%; min-height: 692px; height: calc(100% - 76px); background-color: #fff; z-index: 2; transition: all .5s cubic-bezier(0, 0.21, 0.03, 1.01); opacity: 0; top: 100%;}
+.cont > h3{font-size: 18px; margin-bottom: 14px;}
+.manage_wrap{position: fixed; top: 0; left: 0; width: 100%; min-height: 692px; height: calc(100% - 76px); background-color: #fff; z-index: 2; transition: all .5s cubic-bezier(0, 0.21, 0.03, 1.01); opacity: 1; top: 0%;}
 .manage_wrap header.manage_header{height: 40px;}
 .manage_wrap header.manage_header .manage_title{font-size: 24px; font-weight: 500;}
 .manage_wrap header.manage_header .close_btn{position: absolute; right: 13px; top: 15px; background: transparent; font-weight: 300; font-size: 14px;}
