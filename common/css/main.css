@@ -1,0 +1,88 @@
+@import url(../css/set.css);
+.wrap{width: 100%; height: auto; background: #eeece5;}
+/* header */
+header.main_header{position: relative; width: 100%; height: 70px; display: flex; justify-content: space-between; align-items: center;}
+header.main_header .profile{margin-left: 27px; width: 43px; height: 43px;}
+header.main_header .profile a{display: block; width: 100%; height: 100%;}
+header.main_header .profile a img{width: 100%;}
+header.main_header h3.account_name{font-weight: 500; font-size: 1.3em; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+header.main_header .search_area{display: flex; margin-right: 27px;}
+header.main_header .search_area li{display: flex; align-items: center; width: 24px; height: 24px;}
+header.main_header .search_area li +li{margin-left: 18px;}
+header.main_header .search_area li img{height: 100%;}
+
+/* account_main */
+.account_main{padding: 19px 48px;}
+.account_main .account_info_wrap{width: 279px; height: 155px; background-color: #fff; box-shadow: 0px 0px 16px rgba(226, 191, 66, 0.19); border-radius: 12px; margin: 0 auto 18px;}
+.account_info_wrap .account_number_area{position: relative; text-align: center; padding: 12px;}
+.account_info_wrap .account_number_area .account{color: #858585; font-size: 14px;}
+.account_info_wrap .account_number_area .transfer{background-color: transparent; position: absolute; top: 50%; right: 5vw; transform: translateY(-50%); font-size: 14px;}
+.account_info_wrap .account_balance_area{padding: 10px; font-size: 14px; text-align: center; font-weight: 500;}
+.account_info_wrap .account_balance_area span{font-size: 24px; letter-spacing: 0.09em; line-height: 1;}
+.account_info_wrap .account_goal_area{text-align: center;}
+.account_info_wrap .account_goal_area li{margin-bottom: 4px;}
+.account_goal_area .progress_area{display: flex; justify-content: center; align-items: center;}
+.account_goal_area .progressbar{position: relative; width: 202px; height: 6px; background-color: #c4c4c4; border-radius: 3px; margin-right: 7px;}
+.account_goal_area .progressbar .goal_bar{position: absolute; top: -7px; background: url(../img/goal_bar.svg) no-repeat center; width: 8px; height: 21px;}
+.account_goal_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #ffdb4c; border-radius: 3px 0 0 3px;}
+.account_goal_area .rest_goal_area{font-size: 14px; color: #858585;}
+.account_goal_area .term,
+.account_goal_area .pay{font-size: inherit;}
+.account_loan_area{display: block; margin: 1vw 0; letter-spacing: -0.09em; text-align: center; font-weight: 500; font-size: 14px;}
+.account_loan_area a{margin-left: 5px; text-decoration: underline;}
+
+/* account_history */
+.account_history{position: relative; min-height: 383px; background-color: #f5f5f5; box-shadow: 0px -5px 14px rgba(189, 144, 28, 0.08); border-radius: 30px 30px 0px 0px; padding: 25px 30px 0px; transition: all .4s ease; box-sizing: border-box;}
+.account_history .open_btn{position: absolute; top: 2%; left: 50%; transform: translateX(-50%); width: 48px; height: 3px;}
+.account_history .open_btn img{display: block;}
+.account_history .his_scroll_area{width: 100%; height: 100%; overflow: scroll;}
+.account_history .his_scroll_area::-webkit-scrollbar{display: none;}
+.account_history .his_scroll_area .my_bank_area{width: 100%; height: 50px; overflow-x: scroll; -ms-overflow-style: none; margin-bottom: 17px;}
+.account_history .his_scroll_area .my_bank_area::-webkit-scrollbar{display: none;}
+.account_history .his_scroll_area .my_bank_area .scroll_area{width: 416px; height: 100%; }
+.account_history .his_scroll_area .my_bank_area .scroll_area .my_bank_list{width: auto; height: 100%; margin-right: 13px; float: left;}
+.my_bank_area .scroll_area .my_bank_list li{position: relative; width: 130px; height: 100%; background-color: #dadada; border-radius: 6px; color: #fff; overflow: hidden; float: left;}
+.my_bank_area .scroll_area .my_bank_list li + li{margin-left: 13px;}
+.my_bank_area .scroll_area .my_bank_list li .now_bar{height: 100%; width: 50%;}
+.my_bank_area .scroll_area .my_bank_list li:first-child .now_bar{background-color: #ff5f00;}
+.account_history .my_bank_area .scroll_area .my_bank_list li:nth-child(2) .now_bar{background-color: #feb700;}
+.account_history .my_bank_area .scroll_area .my_bank_list li .text_area{font-size: 12px; line-height: 1; position: absolute; top: 50%; left: 10%; transform: translateY(-50%);}
+.my_bank_list li .text_area .bank_name,
+.my_bank_list li .text_area .now_money{font-size: inherit;}
+.my_bank_list li .text_area .bank_name{margin-bottom: 4px;}
+
+.account_history .my_bank_area .scroll_area .add_bank_area{width: 130px; height: 100%; float: left; color: #ff5f00; font-size: 12px; display: flex; align-items: center; background-color: transparent;}
+.account_history .my_bank_area .scroll_area .add_bank_area span{background: url(../img/add_bank.svg) no-repeat center; width: 24px; height: 24px; margin-right: 5px; background-position-y: 1px;}
+
+.account_history .account_history_area{width: 100%;}
+.account_history .account_history_area .day_history > li{margin-bottom: 38px;}
+.day_history > li .title_area{display: flex; justify-content: space-between; margin-bottom: 6px;}
+.day_history > li .title_area strong{font-size: 14px; font-weight: bold;}
+.day_history > li .title_area p{font-size: 14px; color: #b4b4b4;}
+.day_history > li .title_area p span{font-size: inherit;}
+.day_history > li .history_cont{margin-bottom: 38px;}
+.day_history > li .history_cont li{line-height: 2.2; border-bottom: 1px solid #dcdcdc; display: flex; justify-content: space-between; font-size: 18px; color: #444;}
+.day_history > li .history_cont li span{font-size: inherit;}
+.day_history > li .history_cont li .his_money{font-weight: 300;}
+.day_history > li .history_cont li .his_money.in{color: #ff5f00;}
+
+/* menu */
+nav.menu{position: relative; bottom: 0; width: 100%; height: 76px; box-sizing: border-box; background: linear-gradient(163.63deg, #00bdb2 11.35%, #c4e7bb 139.96%); z-index: 2;}
+nav.menu .menu_area{width: 100%; height: 100%; display: flex; justify-content: space-around; align-items: center;}
+nav.menu .menu_area li{width: 28px; height: 28px;}
+nav.menu .menu_area li a{display: block; width: 100%; height: 100%; display: flex; align-content: center;}
+nav.menu .menu_area li a img{width: 100%;}
+nav.menu .menu_area li.on a img{filter: invert(0.8); opacity: .7;}
+
+/* 지출관리 */
+.cont{position: relative; padding: 30px 30px 10px;}
+.cont > h3{font-size: 18px;}
+.manage_wrap{position: fixed; top: 0; left: 0; width: 100%; min-height: 692px; height: calc(100% - 76px); background-color: #fff; z-index: 2; transition: all .5s cubic-bezier(0, 0.21, 0.03, 1.01); opacity: 0; top: 100%;}
+.manage_wrap header.manage_header{height: 40px;}
+.manage_wrap header.manage_header .manage_title{font-size: 24px; font-weight: 500;}
+.manage_wrap header.manage_header .close_btn{position: absolute; right: 13px; top: 15px; background: transparent; font-weight: 300; font-size: 14px;}
+.manage_wrap .manage_scroll_area{height: calc(100% - 80px);}
+.manage_wrap .manage_scroll_area .goal_area{}
+.manage_wrap .manage_scroll_area .goal_area .title_area{display: flex; justify-content: space-between; align-items: center;}
+.manage_wrap .manage_scroll_area .goal_area .title_area h3{font-weight: 500; font-size: 18px;}
+.manage_wrap .manage_scroll_area .goal_area .title_area span{font-size: 24px; font-weight: 500; color: #ff5f00;}
