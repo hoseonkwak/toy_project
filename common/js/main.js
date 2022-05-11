@@ -96,11 +96,11 @@ window.addEventListener('DOMContentLoaded', function() {
   const winhh = window.outerHeight;
 
   //사이즈가 조절될 때
-  window.addEventListener('resize', () => {
-    //console.log(winhh);
-    const mainhh2 = window.outerHeight;
-    sethh(mainhh2);
-  });
+  // window.addEventListener('resize', () => {
+  //   //console.log(winhh);
+  //   const mainhh2 = window.outerHeight;
+  //   sethh(mainhh2);
+  // });
   openHis(1);
   openHis(2);
   openHis(3);
@@ -120,25 +120,7 @@ window.addEventListener('DOMContentLoaded', function() {
   }
 
   /* 메인화면 높이 조절 및 his open*/
-  function openHis(num){
-    // const mainHeader = document.querySelector('.main_header');
-    // const mainHeaderhh = mainHeader.offsetHeight;
-    // const accountMain = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_main`);
-    // const accountMainhh = accountMain.offsetHeight;
-    // const accountHistory =  document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_history`);
-    // const mainMenu = document.querySelector('.menu');
-    // const menuhh = mainMenu.offsetHeight;
-    // const managehh = document.querySelector('.manage_wrap');
-
-    // //accountHistory 높이 설정
-    // const setAccountHishh = winhh - mainHeaderhh - accountMainhh - menuhh;
-    // const openAccountHishh = winhh - mainHeaderhh - menuhh;
-    // accountHistory.style.height = `${setAccountHishh}px`;
-
-    // managehh.style.height = `${winhh - menuhh}px`;
-
-    // accountMain.style.marginBottom = `${setAccountHishh}px`;
-    
+  function openHis(num){    
     const hisBtn = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_history .open_btn`);
     hisBtn.addEventListener('click', (e) => {
       const targetNode = e.target.parentNode.parentNode;
