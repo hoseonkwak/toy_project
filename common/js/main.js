@@ -105,6 +105,7 @@ window.addEventListener('DOMContentLoaded', function() {
   openHis(2);
   openHis(3);
 
+  //지출관리 열기
   function manageOpenClose(num){
     // 지출관리 열기
     const openManage = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_goal_area .manage_btn`);
@@ -119,7 +120,7 @@ window.addEventListener('DOMContentLoaded', function() {
     })
   }
 
-  /* 메인화면 높이 조절 및 his open*/
+  /* his open */
   function openHis(num){    
     const hisBtn = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_history .open_btn`);
     hisBtn.addEventListener('click', (e) => {
@@ -378,6 +379,7 @@ window.addEventListener('DOMContentLoaded', function() {
     const canvas = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) #monthChart1`);
 
     const thisMonth = date.getMonth() +1;
+    const thisMonthString = String(thisMonth).padStart(2, '0'); // 이번달 문자형으로 추출
     const monthSpan = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .manage_wrap .manage_scroll_area .spend_wrap h3 span`);
     //console.log(thisMonth);
     monthSpan.textContent = thisMonth;
@@ -386,7 +388,11 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // console.log(obj.bankList[0].date.substr(8, 2)% 2);
     for(let i = 0; i < obj.bankList.length; i++){
-      if(obj.bankList[i].classify !== '') classifyArr.push(obj.bankList[i].classify);
+      if(obj.bankList[i].classify !== ''){
+        if(obj.bankList[i].date.substr(5, 2) === thisMonthString) {
+          classifyArr.push(obj.bankList[i].classify);
+        }
+      }
     }
     //console.log(classifyArr);
 
@@ -404,7 +410,10 @@ window.addEventListener('DOMContentLoaded', function() {
       });
       //console.log(pattern);
       for(let i = 0; i < pattern.length; i++){
-        patternValue += pattern[i].price;
+        if(pattern[i].date.substr(5, 2) === thisMonthString) {
+          // classifyArr.push(obj.bankList[i].classify);
+          patternValue += pattern[i].price;
+        }
       }
       //console.log(patternValue);
       patternArr.push(patternValue);
