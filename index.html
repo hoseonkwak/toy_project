@@ -10,121 +10,365 @@
   <!-- script -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
   <script defer src="./common/js/main.js"></script>
+  <!-- Swiper JS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 </head>
 <body>
   <div class="wrap">
-    <!-- header -->
-    <header class="main_header">
-      <div class="profile">
-        <a href="javascript:void(0)">
-          <img src="./common/img/avatar.png" alt="profile">
-        </a>
-      </div>
-      <h3 class="account_name">생활비</h3>
-      <ul class="search_area">
-        <li><img src="./common/img/simple_payment.svg" alt="간편결제"></li>
-        <li><img src="./common/img/search.svg" alt="검색"></li>
-      </ul>
-    </header>
-    <!-- account_main -->
-    <div class="account_main">
-      <div class="account_info_wrap">
-        <div class="account_number_area">
-          <span class="account">355-673877-78773</span>
-          <button class="transfer">이체</button>
-        </div>
-        <div class="account_balance_area">
-          <span></span>원
-        </div>
-        <ul class="account_goal_area">
-          <li class="progress_area">
-            <div class="progressbar">
-              <div class="goal_bar">
-                <div class="now_bar"></div>
-              </div>
-              <span class="goal_stick"></span>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- header -->
+          <header class="main_header">
+            <div class="profile">
+              <a href="javascript:void(0)">
+                <img src="./common/img/avatar.png" alt="profile">
+              </a>
             </div>
-            <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
-          </li>
-          <li class="rest_goal_area">
-            <span class="term"></span>일 동안 <span class="pay">210,000</span>원 사용가능
-          </li>
-        </ul>
-      </div>
-      <div class="account_loan_area">
-        지금 낮은 이자로 생활대출을 신청하세요! <a href="javascript:void(0)">Go</a>
-      </div>
-    </div>
-    <!-- account_history -->
-    <div class="account_history">
-      <span class="open_btn">
-        <img src="./common/img/open_btn.svg" alt="open">
-      </span>
-      <div class="his_scroll_area">
-        <div class="my_bank_area">
-          <div class="scroll_area clearfix">
-            <ul class="my_bank_list">
-              <li>
-                <div class="now_bar"></div>
-                <div class="text_area">
-                  <p class="bank_name">여행가자!</p>
-                  <span class="now_money">842,200</span>원
-                </div>
-              </li>
-              <li>
-                <div class="now_bar"></div>
-                <div class="text_area">
-                  <p class="bank_name">TV사기</p>
-                  <span class="now_money">142,200</span>원
-                </div>
-              </li>
+            <h3 class="account_name">생활비</h3>
+            <ul class="search_area">
+              <li><img src="./common/img/simple_payment.svg" alt="간편결제"></li>
+              <li><img src="./common/img/search.svg" alt="검색"></li>
             </ul>
-            <button class="add_bank_area">
-              <span></span>저금통 만들기
-            </button>
+          </header>
+          <!-- account_main -->
+          <div class="account_main">
+            <div class="account_info_wrap">
+              <div class="account_number_area">
+                <span class="account">355-673877-78773</span>
+                <button class="transfer">이체</button>
+              </div>
+              <div class="account_balance_area">
+                <span></span>원
+              </div>
+              <ul class="account_goal_area">
+                <li class="progress_area">
+                  <div class="progressbar">
+                    <div class="goal_bar">
+                      <div class="now_bar"></div>
+                    </div>
+                    <span class="goal_stick"></span>
+                  </div>
+                  <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
+                </li>
+                <li class="rest_goal_area">
+                  <span class="term"></span>일 동안 <span class="pay">210,000</span>원 사용가능
+                </li>
+              </ul>
+            </div>
+            <div class="account_loan_area">
+              지금 낮은 이자로 생활대출을 신청하세요! <a href="javascript:void(0)">Go</a>
+            </div>
+          </div>
+          <!-- account_history -->
+          <div class="account_history">
+            <span class="open_btn">
+              <img src="./common/img/open_btn.svg" alt="open">
+            </span>
+            <div class="his_scroll_area">
+              <div class="my_bank_area">
+                <div class="scroll_area clearfix">
+                  <ul class="my_bank_list">
+                    <li>
+                      <div class="now_bar"></div>
+                      <div class="text_area">
+                        <p class="bank_name">여행가자!</p>
+                        <span class="now_money">842,200</span>원
+                      </div>
+                    </li>
+                    <li>
+                      <div class="now_bar"></div>
+                      <div class="text_area">
+                        <p class="bank_name">TV사기</p>
+                        <span class="now_money">142,200</span>원
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="add_bank_area">
+                    <span></span>저금통 만들기
+                  </button>
+                </div>
+              </div>
+              <div class="account_history_area">
+                <ul class="day_history">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 지출관리 -->
+          <div class="manage_wrap">
+            <header class="manage_header cont">
+              <h3 class="manage_title">지출관리</h3>
+              <button class="close_btn">닫기</button>
+            </header>
+            <div class="manage_scroll_area">
+              <ul class="goal_area cont">
+                <li class="title_area">
+                  <h3>기준금액설정</h3> <span>2100000원</span>
+                </li>
+                <li class="progress_area">
+                  <div class="progressbar manage">
+                    <div class="goal_bar">
+                      <div class="now_bar"></div>
+                    </div>
+                    <span class="goal_stick"></span>
+                  </div>
+                  <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
+                </li>
+              </ul>
+              <div class="daily_report_wrap cont">
+                <h3>일간 리포트</h3>
+                <canvas id="dateChart1"></canvas>
+              </div>
+              <div class="spend_wrap cont">
+                <h3><span>6</span>월 지출 패턴</h3>
+                <canvas id="monthChart1">
+                </canvas>
+                <p class="totalOut_area">
+                  <span class="totalOut">456456456</span>원
+                </p>
+              </div>
+              <ul class="pattern_list cont">
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="account_history_area">
-          <ul class="day_history">
-          </ul>
-        </div>
-      </div>
-    </div>
-    <!-- 지출관리 -->
-    <div class="manage_wrap">
-      <header class="manage_header cont">
-        <h3 class="manage_title">지출관리</h3>
-        <button class="close_btn">닫기</button>
-      </header>
-      <div class="manage_scroll_area">
-        <ul class="goal_area cont">
-          <li class="title_area">
-            <h3>기준금액설정</h3> <span>2100000원</span>
-          </li>
-          <li class="progress_area">
-            <div class="progressbar manage">
-              <div class="goal_bar">
-                <div class="now_bar"></div>
-              </div>
-              <span class="goal_stick"></span>
+        <div class="swiper-slide">
+          <!-- header -->
+          <header class="main_header">
+            <div class="profile">
+              <a href="javascript:void(0)">
+                <img src="./common/img/avatar2.png" alt="profile">
+              </a>
             </div>
-            <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
-          </li>
-        </ul>
-        <div class="daily_report_wrap cont">
-          <h3>일간 리포트</h3>
-          <canvas id="dateChart1"></canvas>
+            <h3 class="account_name">의민이 용돈</h3>
+            <ul class="search_area">
+              <li><img src="./common/img/simple_payment.svg" alt="간편결제"></li>
+              <li><img src="./common/img/search.svg" alt="검색"></li>
+            </ul>
+          </header>
+          <!-- account_main -->
+          <div class="account_main">
+            <div class="account_info_wrap">
+              <div class="account_number_area">
+                <span class="account">355-673877-78773</span>
+                <button class="transfer">이체</button>
+              </div>
+              <div class="account_balance_area">
+                <span></span>원
+              </div>
+              <ul class="account_goal_area">
+                <li class="progress_area">
+                  <div class="progressbar">
+                    <div class="goal_bar">
+                      <div class="now_bar"></div>
+                    </div>
+                    <span class="goal_stick"></span>
+                  </div>
+                  <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
+                </li>
+                <li class="rest_goal_area">
+                  <span class="term"></span>일 동안 <span class="pay">210,000</span>원 사용가능
+                </li>
+              </ul>
+            </div>
+            <div class="account_loan_area">
+              지금 낮은 이자로 생활대출을 신청하세요! <a href="javascript:void(0)">Go</a>
+            </div>
+          </div>
+          <!-- account_history -->
+          <div class="account_history">
+            <span class="open_btn">
+              <img src="./common/img/open_btn.svg" alt="open">
+            </span>
+            <div class="his_scroll_area">
+              <div class="my_bank_area">
+                <div class="scroll_area clearfix">
+                  <ul class="my_bank_list">
+                    <li>
+                      <div class="now_bar"></div>
+                      <div class="text_area">
+                        <p class="bank_name">게임기</p>
+                        <span class="now_money">142,200</span>원
+                      </div>
+                    </li>
+                    <li>
+                      <div class="now_bar"></div>
+                      <div class="text_area">
+                        <p class="bank_name">기부실천</p>
+                        <span class="now_money">82,200</span>원
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="add_bank_area">
+                    <span></span>저금통 만들기
+                  </button>
+                </div>
+              </div>
+              <div class="account_history_area">
+                <ul class="day_history">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 지출관리 -->
+          <div class="manage_wrap">
+            <header class="manage_header cont">
+              <h3 class="manage_title">지출관리</h3>
+              <button class="close_btn">닫기</button>
+            </header>
+            <div class="manage_scroll_area">
+              <ul class="goal_area cont">
+                <li class="title_area">
+                  <h3>기준금액설정</h3> <span>2100000원</span>
+                </li>
+                <li class="progress_area">
+                  <div class="progressbar manage">
+                    <div class="goal_bar">
+                      <div class="now_bar"></div>
+                    </div>
+                    <span class="goal_stick"></span>
+                  </div>
+                  <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
+                </li>
+              </ul>
+              <div class="daily_report_wrap cont">
+                <h3>일간 리포트</h3>
+                <canvas id="dateChart1"></canvas>
+              </div>
+              <div class="spend_wrap cont">
+                <h3><span>6</span>월 지출 패턴</h3>
+                <canvas id="monthChart1">
+                </canvas>
+                <p class="totalOut_area">
+                  <span class="totalOut">456456456</span>원
+                </p>
+              </div>
+              <ul class="pattern_list cont">
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="spend_wrap cont">
-          <h3><span>6</span>월 지출 패턴</h3>
-          <canvas id="monthChart1">
-          </canvas>
-          <p class="totalOut_area">
-            <span class="totalOut">456456456</span>원
-          </p>
+        <div class="swiper-slide">
+          <!-- header -->
+          <header class="main_header">
+            <div class="profile">
+              <a href="javascript:void(0)">
+                <img src="./common/img/avatar3.png" alt="profile">
+              </a>
+            </div>
+            <h3 class="account_name">할머니 계좌</h3>
+            <ul class="search_area">
+              <li><img src="./common/img/simple_payment.svg" alt="간편결제"></li>
+              <li><img src="./common/img/search.svg" alt="검색"></li>
+            </ul>
+          </header>
+          <!-- account_main -->
+          <div class="account_main">
+            <div class="account_info_wrap">
+              <div class="account_number_area">
+                <span class="account">355-673877-78773</span>
+                <button class="transfer">이체</button>
+              </div>
+              <div class="account_balance_area">
+                <span></span>원
+              </div>
+              <ul class="account_goal_area">
+                <li class="progress_area">
+                  <div class="progressbar">
+                    <div class="goal_bar">
+                      <div class="now_bar"></div>
+                    </div>
+                    <span class="goal_stick"></span>
+                  </div>
+                  <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
+                </li>
+                <li class="rest_goal_area">
+                  <span class="term"></span>일 동안 <span class="pay">210,000</span>원 사용가능
+                </li>
+              </ul>
+            </div>
+            <div class="account_loan_area">
+              지금 낮은 이자로 생활대출을 신청하세요! <a href="javascript:void(0)">Go</a>
+            </div>
+          </div>
+          <!-- account_history -->
+          <div class="account_history">
+            <span class="open_btn">
+              <img src="./common/img/open_btn.svg" alt="open">
+            </span>
+            <div class="his_scroll_area">
+              <div class="my_bank_area">
+                <div class="scroll_area clearfix">
+                  <ul class="my_bank_list">
+                    <li>
+                      <div class="now_bar"></div>
+                      <div class="text_area">
+                        <p class="bank_name">딸 냉장고</p>
+                        <span class="now_money">542,200</span>원
+                      </div>
+                    </li>
+                    <li>
+                      <div class="now_bar"></div>
+                      <div class="text_area">
+                        <p class="bank_name">아들 컴퓨터</p>
+                        <span class="now_money">432,200</span>원
+                      </div>
+                    </li>
+                  </ul>
+                  <button class="add_bank_area">
+                    <span></span>저금통 만들기
+                  </button>
+                </div>
+              </div>
+              <div class="account_history_area">
+                <ul class="day_history">
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- 지출관리 -->
+          <div class="manage_wrap">
+            <header class="manage_header cont">
+              <h3 class="manage_title">지출관리</h3>
+              <button class="close_btn">닫기</button>
+            </header>
+            <div class="manage_scroll_area">
+              <ul class="goal_area cont">
+                <li class="title_area">
+                  <h3>기준금액설정</h3> <span>2100000원</span>
+                </li>
+                <li class="progress_area">
+                  <div class="progressbar manage">
+                    <div class="goal_bar">
+                      <div class="now_bar"></div>
+                    </div>
+                    <span class="goal_stick"></span>
+                  </div>
+                  <span class="manage_btn"><img src="./common/img/chart_icon.svg" alt="chart"></span>
+                </li>
+              </ul>
+              <div class="daily_report_wrap cont">
+                <h3>일간 리포트</h3>
+                <canvas id="dateChart1"></canvas>
+              </div>
+              <div class="spend_wrap cont">
+                <h3><span>6</span>월 지출 패턴</h3>
+                <canvas id="monthChart1">
+                </canvas>
+                <p class="totalOut_area">
+                  <span class="totalOut">456456456</span>원
+                </p>
+              </div>
+              <ul class="pattern_list cont">
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
     <!-- menu -->
     <nav class="menu">
       <ul class="menu_area">

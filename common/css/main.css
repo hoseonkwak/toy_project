@@ -25,7 +25,9 @@ header.main_header .search_area li img{height: 100%;}
 .progress_area .progressbar{position: relative; width: 202px; height: 6px; background-color: #c4c4c4; border-radius: 3px; margin-right: 7px;}
 .progress_area .progressbar .goal_bar{position: relative; width: 40%; height: 100%; border-radius: 3px 0 0 3px;}
 
-.progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #ffdb4c; border-radius: 3px 0 0 3px;}
+.swiper .swiper-slide:nth-child(1) .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #ffdb4c; border-radius: 3px 0 0 3px;}
+.swiper .swiper-slide:nth-child(2) .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #4c89ff; border-radius: 3px 0 0 3px;}
+.swiper .swiper-slide:nth-child(3) .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #c64cff; border-radius: 3px 0 0 3px;}
 .progress_area .progressbar .goal_stick{position: absolute; top: -7px; background: url(../img/goal_bar.svg) no-repeat center; width: 8px; height: 21px;}
 
 .account_goal_area .rest_goal_area{font-size: 14px; color: #858585;}
@@ -44,12 +46,22 @@ header.main_header .search_area li img{height: 100%;}
 .account_history .his_scroll_area .my_bank_area::-webkit-scrollbar{display: none;}
 .account_history .his_scroll_area .my_bank_area .scroll_area{width: 416px; height: 100%; }
 .account_history .his_scroll_area .my_bank_area .scroll_area .my_bank_list{width: auto; height: 100%; margin-right: 13px; float: left;}
+
+/* .swiper .swiper-slide:nth-child(1) .my_bank_area .scroll_area .my_bank_list li{color: #000;} */
+
 .my_bank_area .scroll_area .my_bank_list li{position: relative; width: 130px; height: 100%; background-color: #dadada; border-radius: 6px; color: #fff; overflow: hidden; float: left;}
 .my_bank_area .scroll_area .my_bank_list li + li{margin-left: 13px;}
 .my_bank_area .scroll_area .my_bank_list li .now_bar{height: 100%; width: 50%;}
-.my_bank_area .scroll_area .my_bank_list li:first-child .now_bar{background-color: #ff5f00;}
-.account_history .my_bank_area .scroll_area .my_bank_list li:nth-child(2) .now_bar{background-color: #feb700;}
-.account_history .my_bank_area .scroll_area .my_bank_list li .text_area{font-size: 12px; line-height: 1; position: absolute; top: 50%; left: 10%; transform: translateY(-50%);}
+.swiper .swiper-slide:nth-child(1) .my_bank_area .scroll_area .my_bank_list li:first-child .now_bar{background-color: #ff5f00;}
+.swiper .swiper-slide:nth-child(1) .my_bank_area .scroll_area .my_bank_list li:nth-child(2) .now_bar{background-color: #feb700;}
+
+.swiper .swiper-slide:nth-child(2) .my_bank_area .scroll_area .my_bank_list li:first-child .now_bar{background-color: #55acee;}
+.swiper .swiper-slide:nth-child(2) .my_bank_area .scroll_area .my_bank_list li:nth-child(2) .now_bar{background-color: #005f59;}
+
+.swiper .swiper-slide:nth-child(3) .my_bank_area .scroll_area .my_bank_list li:first-child .now_bar{background-color: #0a73c3;}
+.swiper .swiper-slide:nth-child(3) .my_bank_area .scroll_area .my_bank_list li:nth-child(2) .now_bar{background-color: #eeba00;}
+
+.my_bank_area .scroll_area .my_bank_list li .text_area{font-size: 12px; line-height: 1; position: absolute; top: 50%; left: 10%; transform: translateY(-50%);}
 .my_bank_list li .text_area .bank_name,
 .my_bank_list li .text_area .now_money{font-size: inherit;}
 .my_bank_list li .text_area .bank_name{margin-bottom: 4px;}
@@ -85,10 +97,18 @@ nav.menu .menu_area li.on a img{filter: invert(0.8); opacity: .7;}
 .manage_wrap header.manage_header .manage_title{font-size: 24px; font-weight: 500;}
 .manage_wrap header.manage_header .close_btn{position: absolute; right: 13px; top: 15px; background: transparent; font-weight: 300; font-size: 14px;}
 .manage_wrap .manage_scroll_area{height: calc(100% - 80px); overflow-y: scroll;}
-.manage_wrap .manage_scroll_area .goal_area{}
 .manage_wrap .manage_scroll_area .goal_area .title_area{display: flex; justify-content: space-between; align-items: center;}
 .manage_wrap .manage_scroll_area .goal_area .title_area h3{font-weight: 500; font-size: 18px;}
 .manage_wrap .manage_scroll_area .goal_area .title_area span{font-size: 24px; font-weight: 500; color: #ff5f00;}
 .spend_wrap{position: relative;}
 .spend_wrap .totalOut_area{position: absolute; top: 58%; left: 50%; transform: translate(-50%, -50%); font-size: 14px;}
 .spend_wrap .totalOut_area .totalOut{font-size: 24px;}
+.pattern_list li{margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;}
+.pattern_list li .pattern_title{font-size: 18px;}
+.pattern_list li .pattern_title::before{content: ''; width: 28px; height: 28px; display: inline-block; background-size: contain; vertical-align: top; margin-right: 14px;}
+.pattern_list li:first-child .pattern_title::before{background: url(../img/health.svg) no-repeat center;}
+.pattern_list li:nth-child(2) .pattern_title::before{background: url(../img/eatout.svg) no-repeat center;}
+.pattern_list li:nth-child(3) .pattern_title::before{background: url(../img/mart.svg) no-repeat center;}
+.pattern_list li:nth-child(4) .pattern_title::before{background: url(../img/shop.svg) no-repeat center;}
+.pattern_list li:last-child .pattern_title::before{background: url(../img/oiling.svg) no-repeat center;}
+.pattern_list li .pattern_money{font-size: 18px; color: #858585;}
