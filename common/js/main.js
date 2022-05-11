@@ -11,7 +11,7 @@ window.addEventListener('DOMContentLoaded', function() {
   manageOpenClose(3);
 
   //json 데이터
-  const jsonUrl = 'https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank.json';
+  const jsonUrl = 'https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank1.json';
   const jsonUrl2 = 'https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank2.json';
   const jsonUrl3 = 'https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank3.json';
   // const jsonUrl = '../bank.json';
@@ -27,7 +27,7 @@ window.addEventListener('DOMContentLoaded', function() {
       accountHistory(obj, date, 1);  // 계좌내역
       dateChart(obj, date, 1); // 일간 그래프
       outPattern(obj, date, 1);  //지출패턴
-      console.log(obj.bankList);
+      //console.log(obj.bankList);
     });
 
     const dataResult2 = fetch(jsonUrl2)
@@ -42,7 +42,7 @@ window.addEventListener('DOMContentLoaded', function() {
       accountHistory(obj, date, 2);  // 계좌내역
       dateChart(obj, date, 2); // 일간 그래프
       outPattern(obj, date, 2);  //지출패턴
-      console.log(obj.bankList);
+      //console.log(obj.bankList);
     });
 
     const dataResult3 = fetch(jsonUrl3)
@@ -57,8 +57,7 @@ window.addEventListener('DOMContentLoaded', function() {
       accountHistory(obj, date, 3);  // 계좌내역
       dateChart(obj, date, 3); // 일간 그래프
       outPattern(obj, date, 3);  //지출패턴
-
-      console.log(obj.bankList);
+      //console.log(obj.bankList);
     });
 
 
@@ -102,9 +101,9 @@ window.addEventListener('DOMContentLoaded', function() {
     const mainhh2 = window.outerHeight;
     sethh(mainhh2);
   });
-  sethh(winhh, 1);
-  sethh(winhh, 2);
-  sethh(winhh, 3);
+  openHis(1);
+  openHis(2);
+  openHis(3);
 
   function manageOpenClose(num){
     // 지출관리 열기
@@ -120,23 +119,36 @@ window.addEventListener('DOMContentLoaded', function() {
     })
   }
 
-  /* 메인화면 높이 조절 */
-  function sethh(winhh, num){
-    const mainHeader = document.querySelector('.main_header');
-    const mainHeaderhh = mainHeader.offsetHeight;
-    const accountMain = document.querySelector('.account_main');
-    const accountMainhh = accountMain.offsetHeight;
-    const accountHistory =  document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_history`);
-    const mainMenu = document.querySelector('.menu');
-    const menuhh = mainMenu.offsetHeight;
-    const managehh = document.querySelector('.manage_wrap');
+  /* 메인화면 높이 조절 및 his open*/
+  function openHis(num){
+    // const mainHeader = document.querySelector('.main_header');
+    // const mainHeaderhh = mainHeader.offsetHeight;
+    // const accountMain = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_main`);
+    // const accountMainhh = accountMain.offsetHeight;
+    // const accountHistory =  document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_history`);
+    // const mainMenu = document.querySelector('.menu');
+    // const menuhh = mainMenu.offsetHeight;
+    // const managehh = document.querySelector('.manage_wrap');
 
-    //accountHistory 높이 설정
-    const setAccountHishh = winhh - mainHeaderhh - accountMainhh - menuhh;
-    accountHistory.style.height = `${setAccountHishh}px`;
+    // //accountHistory 높이 설정
+    // const setAccountHishh = winhh - mainHeaderhh - accountMainhh - menuhh;
+    // const openAccountHishh = winhh - mainHeaderhh - menuhh;
+    // accountHistory.style.height = `${setAccountHishh}px`;
 
-    managehh.style.height = `${winhh - menuhh}px`;
+    // managehh.style.height = `${winhh - menuhh}px`;
+
+    // accountMain.style.marginBottom = `${setAccountHishh}px`;
     
+    const hisBtn = document.querySelector(`.swiper .swiper-slide:nth-child(${num}) .account_history .open_btn`);
+    hisBtn.addEventListener('click', (e) => {
+      const targetNode = e.target.parentNode.parentNode;
+      console.log(targetNode.classList.contains('on'));
+      if(targetNode.classList.contains('on')){
+        targetNode.classList.remove('on');
+      }else {
+        targetNode.classList.add('on');
+      }
+    });
   }
 
   // progressbar
