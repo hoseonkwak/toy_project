@@ -23,11 +23,11 @@ header.main_header .search_area li img{height: 100%;}
 .account_info_wrap .account_goal_area li{margin-bottom: 4px;}
 .progress_area{display: flex; justify-content: center; align-items: center;}
 .progress_area .progressbar{position: relative; width: 202px; height: 6px; background-color: #c4c4c4; border-radius: 3px; margin-right: 7px;}
-.progress_area .progressbar .goal_bar{position: relative; width: 40%; height: 100%; border-radius: 3px 0 0 3px;}
-
-.swiper .swiper-slide:nth-child(1) .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #ffdb4c; border-radius: 3px 0 0 3px;}
-.swiper .swiper-slide:nth-child(2) .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #4c89ff; border-radius: 3px 0 0 3px;}
-.swiper .swiper-slide:nth-child(3) .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; background-color: #c64cff; border-radius: 3px 0 0 3px;}
+.progress_area .progressbar .goal_bar{position: relative; width: 40%; height: 100%; border-radius: 3px 0 0 3px; }
+.swiper .swiper-slide .progress_area .progressbar .now_bar{position: relative; width: 40%; height: 100%; max-width: 100%; border-radius: 3px 0 0 3px;}
+.swiper .swiper-slide:nth-child(1) .progress_area .progressbar .now_bar{background-color: #ffdb4c;}
+.swiper .swiper-slide:nth-child(2) .progress_area .progressbar .now_bar{background-color: #4c89ff;}
+.swiper .swiper-slide:nth-child(3) .progress_area .progressbar .now_bar{background-color: #c64cff;}
 .progress_area .progressbar .goal_stick{position: absolute; top: -7px; background: url(../img/goal_bar.svg) no-repeat center; width: 8px; height: 21px;}
 
 .account_goal_area .rest_goal_area{font-size: 14px; color: #858585;}
