@@ -10,9 +10,12 @@ window.addEventListener("DOMContentLoaded", function () {
   manageOpenClose(3);
 
   //json 데이터
-  const jsonUrl = "https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank1.json";
-  const jsonUrl2 = "https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank2.json";
-  const jsonUrl3 = "https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank3.json";
+  // const jsonUrl = "https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank1.json";
+  // const jsonUrl2 = "https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank2.json";
+  // const jsonUrl3 = "https://raw.githubusercontent.com/hoseonkwak/toy_project/master/bank3.json";
+  const jsonUrl = "./bank1.json";
+  const jsonUrl2 = "./bank2.json";
+  const jsonUrl3 = "./bank3.json";
   // const jsonUrl = '../bank.json';
   const dataResult = fetch(jsonUrl)
     .then((res) => {
